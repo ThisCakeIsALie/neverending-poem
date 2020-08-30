@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/index.css">
+        <script src="js/vue-spinner.min.js"></script>
+    </head>
+    <body>
+        <div id="root">
+            <h1 class="big-heading">The neverending poem</h1>
+            <h5 class="small-heading">A collaborative text adventure</h5>
+            <p>
+                Click <span class="text-action" @click="scrollToContribute()">here</span> to contribute.
+                Or keep scrolling to read the <span class="text-action" @click="scrollToPoem()">poem</span>.
+            </p>
+            <div id="poem" ref="poem">
+                <template v-for="({ paragraph, time }, index) in poem">
+                    <paragraph-text class="paragraph">{{ paragraph }}</paragraph-text>
+                    <paragraph-info :time="time" :info-placement="(index % 2 == 0) ? 'right' : 'left'"></paragraph-info>
+                </template>
+            </div>
+            <div id="bottom">
+                <paragraph-input :submitting="submitting" class="new-paragraph" ref="paragraphInput" @propose="proposeParagraph($event)"></paragraph-input>
+            </div>
+            <span class="about">Created by <a href="">TheCakeIsALie</a></span>
+        </div>
+        <script src="js/index.js"></script>
+    </body>
+</html>

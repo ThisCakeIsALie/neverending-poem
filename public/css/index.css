@@ -1,0 +1,134 @@
+body {
+    font-size: large;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2vh;
+}
+
+#root {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
+}
+
+#poem {
+    width: 100%;
+}
+
+#bottom {
+    width: min(30em, 100%);
+    margin-top: 1em;
+    margin-bottom: 40vh;
+}
+
+.vertical-line {
+    height: 2em;
+    width: 3px;
+    border-radius: 3px;
+    background-color: rgb(93, 197, 150);
+}
+
+.center-line-from-right {
+    margin-right: 50%;
+}
+
+.center-line-from-left {
+    margin-left: 50%;
+}
+
+fieldset {
+    border: 0;
+}
+
+textarea {
+    resize: none;
+    overflow: auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+
+textarea:disabled {
+    background-color: inherit;
+}
+
+a {
+    color: rgb(65, 184, 131);
+}
+
+.text-input-field {
+    border: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.error {
+    color: red;
+}
+
+.loader {
+    margin: 1rem;
+}
+
+.paragraph-text {
+    white-space: pre-line;
+    word-break: break-all;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+.paragraph-button {
+    font-size: 1em;
+    display: block;
+    margin: auto;
+    margin-top: 0.5em;
+    color: white;
+    border: none;
+    background: rgb(65, 184, 131);
+    padding: 1em;
+}
+
+.paragraph-button:hover {
+    background: #0EA640;
+}
+
+.paragraph-button:disabled {
+    background: gray;
+}
+
+.about {
+    font-size: 0.75em;
+}
+
+.big-heading {
+    margin-bottom: 0;
+}
+
+.small-heading {
+    margin-top: 0;
+    color: rgb(65, 184, 131);
+}
+
+.paragraph-info-container {
+    display: flex;
+}
+
+.order-left {
+    flex-direction: row-reverse;
+}
+
+.time-info {
+    color: gray;
+
+    font-size: 0.5em;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.text-action {
+    color: rgb(65, 184, 131);
+    cursor: pointer;
+
+}

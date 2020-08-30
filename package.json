@@ -1,0 +1,30 @@
+{
+  "name": "neverending-poem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "buffer": "^5.6.0",
+    "express": "^4.17.1",
+    "node-cleanup": "^2.1.2",
+    "proof-of-work": "^3.3.2",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.0",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "browserify": "^16.5.2"
+  },
+  "scripts": {
+    "build": "browserify public/js/proofWorker.js > public/js/proofWorker.browser.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThisCakeIsALie/neverending-poem.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ThisCakeIsALie/neverending-poem/issues"
+  },
+  "homepage": "https://github.com/ThisCakeIsALie/neverending-poem#readme"
+}
